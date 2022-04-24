@@ -2,7 +2,6 @@ import sql from "mssql";
 import config from "../config";
 
 export const dbSettings = {
-  // user: 'gestion-datos',
   user: config.dbUser,
   password: config.dbPassword,
   server: config.dbServer,
