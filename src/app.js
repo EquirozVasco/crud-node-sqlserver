@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import productRoutes from "./routes/products.routes";
 import customerRoutes from "./routes/customers.routes";
+import sellerRoutes from "./routes/sellers.routes";
 import morgan from "morgan";
 
 import config from "./config";
@@ -20,5 +21,6 @@ app.use(express.json());
 // Routes
 app.use("/api", productRoutes);
 app.use("/api", customerRoutes);
+app.use("/api", sellerRoutes);
 
 export default app;
