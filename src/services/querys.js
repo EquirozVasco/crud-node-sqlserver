@@ -18,5 +18,14 @@ export const querys = {
   updateCustomerById:
     "UPDATE [little-store].[dbo].[Customers] SET Name = @name, adress = @adress WHERE customerId = @customerId",
 
+  // querys Sellers
+  getAllSellers: "SELECT * FROM [little-store].[dbo].Sellers;",
+  getSellerById: "SELECT * FROM [Sellers] Where sellerId = @sellerId",
+  addNewSeller:
+    "INSERT INTO [little-store].[dbo].[Sellers] (name, adress) VALUES (@name,@adress);",
+  deleteSeller: "DELETE FROM [little-store].[dbo].[Sellers] WHERE sellerId = @sellerId",
+  updateSellerById:
+    "UPDATE [little-store].[dbo].[Sellers] SET Name = @name, adress = @adress WHERE sellerId = @sellerId",
+
 
 };
