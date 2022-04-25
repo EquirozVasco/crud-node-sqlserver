@@ -27,5 +27,17 @@ export const querys = {
   updateSellerById:
     "UPDATE [little-store].[dbo].[Sellers] SET Name = @name, adress = @adress WHERE sellerId = @sellerId",
 
+  // querys Sales
+  getAllSales: "SELECT Products.name as Product_name, Customers.name as Customer_name, Sellers.name as Seller_name FROM Sales inner join Products on Sales.saleId = Products.productId inner join Customers on Sales.customerId = Customers.customerId inner join Sellers on Sellers.sellerId = Sales.sellerId;",
+
+  getSaleById: "SELECT Products.name as Product_name, Customers.name as Customer_name, Sellers.name as Seller_name FROM Sales inner join Products on Sales.saleId = Products.productId inner join Customers on Sales.customerId = Customers.customerId inner join Sellers on Sellers.sellerId = Sales.sellerId Where saleId = @saleId",
+  
+  addNewSale:
+    "INSERT INTO [little-store].[dbo].[Sales] (productId, customerId, sellerId) VALUES (@productId,@customerId,@sellerId);",
+
+  deleteSale: "DELETE FROM [little-store].[dbo].[Sales] WHERE saleId = @saleId",
+  updateSaleById:
+    "UPDATE [little-store].[dbo].[Sales] SET productId = @productId, customerId = @customerId, sellerId = @sellerId WHERE saleId = @saleId",
+
 
 };
